@@ -45,6 +45,7 @@ abstract class AppDatabase : RoomDatabase() {
                     "varotra_database"
                 )
                     .addCallback(AppDatabaseCallback(scope))
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance
