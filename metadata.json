@@ -1,0 +1,6 @@
+{
+  "name": "varotra.mg",
+  "description": "Application intuitive de gestion commerciale pour commerçants avec suivi des ventes, produits, clients et factures PDF en Ariary (Ar)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
