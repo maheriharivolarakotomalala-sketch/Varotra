@@ -66,22 +66,23 @@ enum class Screen(
     CUSTOMERS("Clients", Icons.Filled.People, Icons.Outlined.People, "nav_customers"),
     SALES("Ventes", Icons.Filled.ReceiptLong, Icons.Outlined.ReceiptLong, "nav_sales")
 }
-
 class MainActivity : ComponentActivity() {
-
-    private val viewModel: VarotraViewModel by viewModels {
-        VarotraViewModel.provideFactory(application)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        val viewModel: VarotraViewModel by viewModels {
+            VarotraViewModel.provideFactory(application)
+        }
+
         setContent {
             VarotraTheme {
                 VarotraApp(viewModel = viewModel)
             }
         }
     }
+
 }
 
 @Composable
